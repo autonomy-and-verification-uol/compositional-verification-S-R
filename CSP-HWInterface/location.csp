@@ -1,0 +1,18 @@
+--location.csp
+
+channel getLocation : coordPairs
+
+LocationChan = {| moveTo, getLocation, acknowlege, planComplete |}
+
+LOCATION(position) =
+  moveTo?loc -> acknowlege.Motor_ID -> LOCATION(loc)
+  []
+  getLocation!position -> LOCATION(position)
+  []
+  planComplete ->
+  getLocation!position -> LOCATION(position)
+
+
+  assert LOCATION( (a,a) ) ; loop(loopChan -> SKIP) :[deadlock free]
+  assert LOCATION((a,a)) :[divergence free]
+  assert LOCATION((a,a)) :[deterministic]

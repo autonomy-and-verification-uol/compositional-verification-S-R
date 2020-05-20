@@ -1,0 +1,21 @@
+--Motors
+
+channel moveTo : coordPairs
+
+-- The External Alphabet of MOTORS
+MotorsChan = {|moveTo, acknowlege|}
+
+MOTORS =
+--  moveBy?distance ->
+--  acknowlege.Motor_ID ->
+--  MOTORS
+--  []
+--  planComplete -> SKIP
+  moveTo?loc ->
+  acknowlege.Motor_ID ->
+  MOTORS
+
+
+  assert MOTORS ; loop(loopChan -> SKIP) :[deadlock free]
+  assert MOTORS :[divergence free]
+  assert MOTORS :[deterministic]

@@ -1,0 +1,40 @@
+--Executor
+include "types.csp"
+include "executor.csp"
+include "location.csp"
+include "motors.csp"
+include "properties.csp"
+external loop
+
+--testPlan = <Turn.180, moveBy.5,Turn.90, Lights.True, Turn.-90, moveBy.3, Lights.False>
+--testPlan = <UP, UP, LEFT, UP, RIGHT, RIGHT, DOWN, DOWN, DOWN >
+--testPlan = seq(Action)
+
+testPlan = <0.0,1.0,1.1>
+testPlanSet = { (0,1), (0,2),(5,7),(0,0)}
+--nametype setOfCords = Set(coordPair)
+--nametype seqOfCords = <({0..10},{0..10})>
+
+channel output : hasMoved.atGoal
+
+-- parameters: plan and goal location
+channel input : Set(coordPairs).coordPairs
+
+
+--This seems to work for now, but only with increasing plans (i.e. a,a; a,b; etc not a,b;a,a)
+sequentialisePlan(p) =seq(p)
+
+
+plan1 = { (a,a), (a,b), (b,b) }
+
+INTERFACE(position) =
+  EXECUTOR
+    [| {| moveTo, getLocation, acknowlege, planComplete |} |]
+  (MOTORS [ MotorsChan  || LocationChan ]  LOCATION(position) )
+
+
+testInterface = INTERFACE( (a,a) )
+
+assert INTERFACE( (a,a) ) ; loop(loopChan -> SKIP) :[deadlock free]
+assert INTERFACE((a,a)) :[divergence free]
+assert INTERFACE((a,a)) :[deterministic]

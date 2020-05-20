@@ -1,0 +1,15 @@
+--Wheels
+
+-- The External Alphabet of WHEELS
+WheelsChan = {|turnBy, acknowlege, planComplete|}
+
+WHEELS=
+  turnBy?degress ->
+  acknowlege.Wheels_ID ->
+  WHEELS
+  []
+  planComplete -> SKIP
+
+assert WHEELS  ; loop(loopChan -> SKIP) :[deadlock free]
+assert WHEELS :[divergence free]
+assert WHEELS :[deterministic]

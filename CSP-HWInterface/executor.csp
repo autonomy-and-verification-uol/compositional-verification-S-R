@@ -1,0 +1,36 @@
+-- executor.csp
+
+RunChan = {|moveTo, acknowlege, planComplete, output|}
+
+-- DOES NOT WORK
+EXECUTOR =
+-- if the plan is not the empty set, actually run the plan
+input?plan?goalPos ->
+if plan == {} then
+  planComplete -> OUTPUT(goalPos)
+else
+  RUN_PLAN(sequentialisePlan(plan)); OUTPUT'(goalPos)
+
+RUN_PLAN(<>) =
+  planComplete ->
+  SKIP
+
+RUN_PLAN(<planHead>^planTail) =
+  RUN_ACTION(planHead) ;
+  RUN_PLAN(planTail)
+
+RUN_ACTION(loc) =
+  moveTo!loc ->
+  acknowlege.Motor_ID ->
+  SKIP
+
+OUTPUT(goalPos) =
+  getLocation?position' ->
+  output.False.False -> EXECUTOR
+
+OUTPUT'(goalPos) =
+  getLocation?position' ->
+  if position' == goalPos then
+    output.True.True -> EXECUTOR
+  else
+    output.True.False -> EXECUTOR

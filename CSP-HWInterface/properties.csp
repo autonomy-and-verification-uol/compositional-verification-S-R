@@ -1,0 +1,66 @@
+-- properties.csp
+
+--assert INTERFACE(startPos) :[has trace]: <input.{(a,a),(a,b),(b,b)}, output.True.True>
+
+--assert INTERFACE(startPos)/{diff(Events,{|input, output|})  } [FD= input.{(a,a),(a,b),(b,b)} -> output.True.True -> SKIP
+
+emptyPlanChan = diff(Events,{|input.{}, output.False|})
+
+emptyPlan =
+(
+  input.{}?_ -> output.False.False -> emptyPlan
+  []
+  input.{}?_ -> output.False.True -> emptyPlan
+)
+
+-- Failures only becasue of the divergence of recursing after an input we're not bothered about
+-- This checks that if we get an empty plan, then haveMoved is always False
+assert emptyPlan [F= INTERFACE(startPos)\emptyPlanChan
+
+
+setOfNonEmptyPlans = diff(Set(coordPairs), Set({}) )
+
+nonEmptyPlanChan = diff(Events,{|input, output|})
+
+nonEmptyPlan =
+(
+  input?p:setOfNonEmptyPlans?_ ->
+  (
+    (output.True.False -> nonEmptyPlan)
+    []
+    (output.True.True -> nonEmptyPlan)
+  )
+  []
+  input.{}?_ -> output.False.False -> nonEmptyPlan
+
+
+)
+
+-- This checks that if we get a non-empty plan, then haveMoved is True (and if the plan is empty, then haveMoved is False)
+-- Traces only, because the implementation will refuse to say we're at the goal if we're not, and we've not modelled enough about that to say T or F.
+assert nonEmptyPlan [T= INTERFACE(startPos)\nonEmptyPlanChan
+
+ioAndLocationChan = diff(Events, {|input, output, planComplete, getLocation |})
+
+planLast(planTop ^ <planLast>) = planLast
+
+atTheGoal(startPos) =
+(input?plan:setOfNonEmptyPlans?goalLoc ->
+planComplete ->
+getLocation?pos:{planLast(sequentialisePlan(plan))} ->
+if pos == goalLoc then
+  output.True.True -> atTheGoal(pos)
+else
+  output.True.False -> atTheGoal(pos)
+)
+[]
+input.{}?goalLoc ->
+planComplete ->
+getLocation.startPos ->
+output.False.False -> atTheGoal(startPos)
+
+
+-- Traces, becasue the implementation refuses to provide a location (on getLocation) that we're not actually at.
+
+-- This checks that, regardless of the plan, if the plan is complete and our position matches our goal, then atGoal will be true.
+assert atTheGoal(startPos) [FD= INTERFACE(startPos)\ioAndLocationChan

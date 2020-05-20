@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.constant name="(" org.eventb.core.identifier="start"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm7" org.eventb.core.predicate="Coords ⊆ ℕ × ℕ"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="start ∈ Coords"/>
+<org.eventb.core.constant name="*" org.eventb.core.identifier="goal"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm8" org.eventb.core.predicate="finite(Coords)"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="goal ∈ Coords"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="Observation ⊆ Coords"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="Observation"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="∃x,y · x ∈ ℕ ∧ y ∈ ℕ ∧ {(x ↦ y)} ⊆ Coords"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="gridsize"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm5" org.eventb.core.predicate="gridsize ∈ ℕ ∧ gridsize &gt; 0 "/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm6" org.eventb.core.predicate="card(Coords) = gridsize ∗ gridsize"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="Coords"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="getX"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="axm12" org.eventb.core.predicate="getX ∈ ℕ × ℕ → ℕ "/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm13" org.eventb.core.predicate="getY ∈ ℕ × ℕ → ℕ "/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm10" org.eventb.core.predicate="∀ x, y · x ↦ y = start ⇒ getX(start) = x "/>
+<org.eventb.core.constant name="9" org.eventb.core.identifier="getY"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm11" org.eventb.core.predicate="∀ x, y · x ↦ y = start ⇒ getY(start) = y"/>
+<org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm14" org.eventb.core.predicate="∀ x, y · x ↦ y ∈ Coords ⇒ x ≤ gridsize ∧ y ≤ gridsize"/>
+</org.eventb.core.contextFile>

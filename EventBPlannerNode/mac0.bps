@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveLeft/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="109" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveRight/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveUp/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="moveDown/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="108" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

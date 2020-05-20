@@ -1,0 +1,31 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{ctx0}
+\CONTEXT{ctx0}{}{}
+\CONSTANTS{
+	\Constant{start}{}
+	\Constant{goal}{}
+	\Constant{Observation}{}
+	\Constant{gridsize}{}
+	\Constant{Coords}{}
+	\Constant{getX}{}
+	\Constant{getY}{}
+}
+\AXIOMS{
+	\Axiom{axm7}{false}{$Coords \subseteq{} \nat{} \cprod{} \nat{}$}{}
+	\Axiom{axm1}{false}{$start \in{} Coords$}{}
+	\Axiom{axm8}{false}{$finite(Coords)$}{}
+	\Axiom{axm2}{false}{$goal \in{} Coords$}{}
+	\Axiom{axm3}{false}{$Observation \subseteq{} Coords$}{}
+	\Axiom{axm4}{false}{$\exists{}x,y \qdot{} x \in{} \nat{} \land{} y \in{} \nat{} \land{} \{(x \mapsto{} y)\} \subseteq{} Coords$}{}
+	\Axiom{axm5}{false}{$gridsize \in{} \nat{} \land{} gridsize > 0 $}{}
+	\Axiom{axm6}{false}{$card(Coords) = gridsize * gridsize$}{}
+	\Axiom{axm12}{false}{$getX \in{} \nat{} \cprod{} \nat{} \tfun{} \nat{} $}{}
+	\Axiom{axm13}{false}{$getY \in{} \nat{} \cprod{} \nat{} \tfun{} \nat{} $}{}
+	\Axiom{axm10}{false}{$\forall{} x, y \qdot{} x \mapsto{} y = start \limp{} getX(start) = x $}{}
+	\Axiom{axm11}{false}{$\forall{} x, y \qdot{} x \mapsto{} y = start \limp{} getY(start) = y$}{}
+	\Axiom{axm14}{false}{$\forall{} x, y \qdot{} x \mapsto{} y \in{} Coords \limp{} x \leq{} gridsize \land{} y \leq{} gridsize$}{}
+}
+\END
+\end{document}

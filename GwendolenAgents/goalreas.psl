@@ -1,0 +1,1 @@
+1: [](B(rover, recharge) -> B(rover, goal(recharge)))

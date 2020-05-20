@@ -1,0 +1,25 @@
+include "parameters.csp"
+--TYPES
+nametype Degrees = { -180..180 }
+nametype Distance = {0..gridLength}
+
+nametype hasMoved = {true, false}
+nametype atGoal = {true, false}
+
+-- A coord is drawn from this set
+datatype coord = a | b
+
+coordPairs = { (x,y) | x <- coord, y <- coord }
+
+datatype ID = Wheels_ID | Motor_ID
+
+datatype Action = UP | DOWN | LEFT | RIGHT
+
+--CHANNELS
+
+channel loopChan
+
+channel turnBy : Degrees
+channel moveBy : Distance
+channel acknowlege : ID
+channel planComplete

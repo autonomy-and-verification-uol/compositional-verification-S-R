@@ -1,0 +1,89 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{mac0}
+\MACHINE{mac0}{}{ctx0}{}
+\VARIABLES{
+	\Variable{PlanSet}{This is currently a set of relations.}
+	\Variable{currentPos}{}
+	\Variable{xcoord}{}
+	\Variable{ycoord}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$PlanSet \subseteq{} Coords \cprod{} Coords$}{\\~The set of plans has elements of the form (position1, position2). This will be better if I can use sequences }
+	\Invariant{inv2}{false}{$start \in{} Observation \limp{} PlanSet = \emptyset{} $}{}
+	\Invariant{inv3}{false}{$goal \in{} Observation \limp{} PlanSet = \emptyset{}$}{}
+	\Invariant{inv4}{false}{$\forall{}x,y \qdot{} x \mapsto{} y \in{} PlanSet \limp{} (x \notin{} Observation \land{} y \notin{} Observation)$}{}
+	\Invariant{inv5}{false}{$currentPos \in{} Coords$}{}
+	\Invariant{inv6}{false}{$xcoord \in{} \nat{} \land{} xcoord \leq{} gridsize$}{}
+	\Invariant{inv7}{false}{$ycoord \in{} \nat{} \land{} ycoord \leq{} gridsize$}{}
+	\Invariant{inv8}{false}{$start = goal \limp{} PlanSet = \emptyset{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act2}{$currentPos \bcmeq{} start$}{true}{}
+		\Action{act3}{$xcoord \bcmeq{} getX(start)$}{true}{}
+		\Action{act4}{$ycoord \bcmeq{} getY(start)$}{true}{}
+		\Action{act5}{$PlanSet \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{moveLeft}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$currentPos \neq{} goal$}{true}{}
+		\Guard{grd3}{false}{$currentPos \notin{} Observation$}{true}{}
+		\Guard{grd4}{false}{$(xcoord-1) \mapsto{} ycoord \notin{} Observation \land{} (xcoord -1) \mapsto{} ycoord \in{} Coords$}{true}{}
+		\Guard{grd5}{false}{$start \neq{} goal$}{true}{}
+		\Guard{grd6}{false}{$start \notin{} Observation \land{} goal \notin{} Observation$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$currentPos \bcmeq{} (xcoord-1) \mapsto{} ycoord$}{true}{}
+		\Action{act2}{$PlanSet \bcmeq{} PlanSet \bunion{}\{currentPos \mapsto{} (xcoord-1 \mapsto{} ycoord)\} $}{true}{}
+		\Action{act3}{$xcoord \bcmeq{} xcoord -1 $}{true}{}
+	}
+}
+\EVT{moveRight}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$currentPos \neq{} goal$}{true}{}
+		\Guard{grd3}{false}{$start \neq{} goal $}{true}{}
+		\Guard{grd4}{false}{$(xcoord + 1) \mapsto{} ycoord \notin{} Observation \land{} (xcoord +1) \mapsto{} ycoord \in{} Coords$}{true}{}
+		\Guard{grd5}{false}{$start \notin{} Observation \land{} goal \notin{} Observation$}{true}{}
+		\Guard{grd6}{false}{$currentPos \notin{} Observation$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$currentPos \bcmeq{} (xcoord +1) \mapsto{} ycoord$}{true}{}
+		\Action{act2}{$PlanSet \bcmeq{} PlanSet\bunion{}\{currentPos \mapsto{} (xcoord +1 \mapsto{} ycoord)\}$}{true}{}
+		\Action{act3}{$xcoord \bcmeq{} xcoord + 1$}{true}{}
+	}
+}
+\EVT{moveUp}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$currentPos \neq{} goal$}{true}{\\~}
+		\Guard{grd2}{false}{$start \neq{} goal$}{true}{}
+		\Guard{grd3}{false}{$xcoord \mapsto{} ycoord +1 \notin{} Observation \land{} xcoord \mapsto{} ycoord + 1 \in{} Coords$}{true}{}
+		\Guard{grd4}{false}{$start \notin{} Observation \land{} goal \notin{} Observation$}{true}{}
+		\Guard{grd5}{false}{$currentPos \notin{} Observation $}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$currentPos \bcmeq{} xcoord \mapsto{} ycoord +1$}{true}{}
+		\Action{act2}{$PlanSet \bcmeq{} PlanSet\bunion{}\{currentPos \mapsto{} (xcoord \mapsto{} ycoord + 1)\}$}{true}{}
+		\Action{act3}{$ycoord \bcmeq{} ycoord + 1$}{true}{}
+	}
+}
+\EVT{moveDown}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$currentPos \neq{} goal$}{true}{}
+		\Guard{grd2}{false}{$start \neq{} goal $}{true}{}
+		\Guard{grd3}{false}{$xcoord \mapsto{} ycoord -1 \notin{} Observation \land{} xcoord \mapsto{} ycoord -1 \in{} Coords$}{true}{}
+		\Guard{grd4}{false}{$start \notin{} Observation \land{} goal \notin{} Observation$}{true}{}
+		\Guard{grd5}{false}{$currentPos \notin{} Observation$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$currentPos \bcmeq{} xcoord \mapsto{} ycoord - 1$}{true}{}
+		\Action{act2}{$PlanSet \bcmeq{} PlanSet\bunion{}\{currentPos \mapsto{} (xcoord \mapsto{} ycoord -1)\}$}{true}{}
+		\Action{act3}{$ycoord \bcmeq{} ycoord - 1$}{true}{}
+	}
+}
+}
+\END
+\end{document}

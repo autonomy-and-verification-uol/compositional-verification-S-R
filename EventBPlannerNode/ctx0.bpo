@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="Coords" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="Observation" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="getX" org.eventb.core.type="ℙ(ℤ×ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="getY" org.eventb.core.type="ℙ(ℤ×ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="goal" org.eventb.core.type="ℤ×ℤ"/>
+<org.eventb.core.poIdentifier name="gridsize" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="start" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(Coords)" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒start∈dom(getX)∧getX∈ℤ × ℤ ⇸ ℤ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒start∈dom(getY)∧getY∈ℤ × ℤ ⇸ ℤ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP-" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Coords⊆ℕ × ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="start∈Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(Coords)" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="goal∈Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Observation⊆Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∃x⦂ℤ,y⦂ℤ·x∈ℕ∧y∈ℕ∧{x ↦ y}⊆Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="gridsize∈ℕ∧gridsize&gt;0" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP0" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP-" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="card(Coords)=gridsize∗gridsize" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="getX∈ℕ × ℕ → ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="getY∈ℕ × ℕ → ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#="/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP0" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒getX(start)=x" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/plannerNode/ctx0.bpo|org.eventb.core.poFile#ctx0|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒getY(start)=y" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y∈Coords⇒x≤gridsize∧y≤gridsize" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#&gt;"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

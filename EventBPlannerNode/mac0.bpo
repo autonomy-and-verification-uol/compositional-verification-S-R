@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="48">
+<org.eventb.core.poIdentifier name="Coords" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="Observation" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="getX" org.eventb.core.type="ℙ(ℤ×ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="getY" org.eventb.core.type="ℙ(ℤ×ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="goal" org.eventb.core.type="ℤ×ℤ"/>
+<org.eventb.core.poIdentifier name="gridsize" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="start" org.eventb.core.type="ℤ×ℤ"/>
+<org.eventb.core.poPredicate name="Observatioo" org.eventb.core.predicate="Coords⊆ℕ × ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="Observatiop" org.eventb.core.predicate="start∈Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="Observatioq" org.eventb.core.predicate="finite(Coords)" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="Observatior" org.eventb.core.predicate="goal∈Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="Observatios" org.eventb.core.predicate="Observation⊆Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="Observatiot" org.eventb.core.predicate="∃x⦂ℤ,y⦂ℤ·x∈ℕ∧y∈ℕ∧{x ↦ y}⊆Coords" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="Observatiou" org.eventb.core.predicate="gridsize∈ℕ∧gridsize&gt;0" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="Observatiov" org.eventb.core.predicate="card(Coords)=gridsize∗gridsize" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="Observatiow" org.eventb.core.predicate="getX∈ℕ × ℕ → ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="Observatiox" org.eventb.core.predicate="getY∈ℕ × ℕ → ℕ" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="Observatioy" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒getX(start)=x" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="Observatioz" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y=start⇒getY(start)=y" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="Observatio{" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x ↦ y∈Coords⇒x≤gridsize∧y≤gridsize" org.eventb.core.source="/plannerNode/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="PlanSet" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos" org.eventb.core.type="ℤ×ℤ"/>
+<org.eventb.core.poIdentifier name="xcoord" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ycoord" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Observation⇒(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="goal∈Observation⇒(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="getX(start)∈ℕ∧getX(start)≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="getY(start)∈ℕ∧getY(start)≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=goal⇒(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈dom(getX)∧getX∈ℤ × ℤ ⇸ ℤ" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈dom(getY)∧getY∈ℤ × ℤ ⇸ ℤ" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#'|org.eventb.core.action#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentPot" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="xcoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ycoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PlanSet'" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos'" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentPot" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTIDENTcurrentPot" org.eventb.core.poStamp="108"/>
+<org.eventb.core.poSequent name="moveLeft/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlanSet∪{currentPos ↦ (xcoord − 1 ↦ ycoord)}⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Observation⇒PlanSet∪{currentPos ↦ (xcoord − 1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="goal∈Observation⇒PlanSet∪{currentPos ↦ (xcoord − 1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈PlanSet∪{currentPos ↦ (xcoord − 1 ↦ ycoord)}⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord − 1 ↦ ycoord∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord − 1∈ℕ∧xcoord − 1≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveLeft/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="109">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=goal⇒PlanSet∪{currentPos ↦ (xcoord − 1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveLeft\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentPou" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="xcoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PlanSet'" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos'" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentPou" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTIDENTcurrentPou" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="currentPos≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="currentPos∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="xcoord − 1 ↦ ycoord∉Observation∧xcoord − 1 ↦ ycoord∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="start≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="start∉Observation∧goal∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#1|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="moveRight/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlanSet∪{currentPos ↦ (xcoord+1 ↦ ycoord)}⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Observation⇒PlanSet∪{currentPos ↦ (xcoord+1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="goal∈Observation⇒PlanSet∪{currentPos ↦ (xcoord+1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈PlanSet∪{currentPos ↦ (xcoord+1 ↦ ycoord)}⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord+1 ↦ ycoord∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord+1∈ℕ∧xcoord+1≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveRight/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=goal⇒PlanSet∪{currentPos ↦ (xcoord+1 ↦ ycoord)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveRight\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentPov" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="xcoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PlanSet'" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos'" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentPov" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTIDENTcurrentPov" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="currentPos≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="start≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="xcoord+1 ↦ ycoord∉Observation∧xcoord+1 ↦ ycoord∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="start∉Observation∧goal∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="currentPos∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#2|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="moveUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlanSet∪{currentPos ↦ (xcoord ↦ ycoord+1)}⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Observation⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord+1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="goal∈Observation⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord+1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈PlanSet∪{currentPos ↦ (xcoord ↦ ycoord+1)}⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord ↦ ycoord+1∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ycoord+1∈ℕ∧ycoord+1≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveUp/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=goal⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord+1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveUp\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentPow" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="ycoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PlanSet'" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos'" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentPow" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTIDENTcurrentPow" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="currentPos≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="start≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="xcoord ↦ ycoord+1∉Observation∧xcoord ↦ ycoord+1∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="start∉Observation∧goal∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="currentPos∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="moveDown/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlanSet∪{currentPos ↦ (xcoord ↦ ycoord − 1)}⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start∈Observation⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord − 1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="goal∈Observation⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord − 1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈PlanSet∪{currentPos ↦ (xcoord ↦ ycoord − 1)}⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="xcoord ↦ ycoord − 1∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ycoord − 1∈ℕ∧ycoord − 1≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="moveDown/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTALLHYPcurrentPox"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=goal⇒PlanSet∪{currentPos ↦ (xcoord ↦ ycoord − 1)}=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poSequent#moveDown\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentPox" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poIdentifier name="ycoord'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PlanSet'" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ))"/>
+<org.eventb.core.poIdentifier name="currentPos'" org.eventb.core.type="ℤ×ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentPox" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#EVTIDENTcurrentPox" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="currentPos≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="start≠goal" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="xcoord ↦ ycoord − 1∉Observation∧xcoord ↦ ycoord − 1∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="start∉Observation∧goal∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="currentPos∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/plannerNode/mac0.bpo|org.eventb.core.poFile#mac0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="108">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PlanSet⊆Coords × Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="start∈Observation⇒PlanSet=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="goal∈Observation⇒PlanSet=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀x⦂ℤ×ℤ,y⦂ℤ×ℤ·x ↦ y∈PlanSet⇒x∉Observation∧y∉Observation" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="currentPos∈Coords" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="xcoord∈ℕ∧xcoord≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="ycoord∈ℕ∧ycoord≤gridsize" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="start=goal⇒PlanSet=(∅ ⦂ ℙ(ℤ×ℤ×(ℤ×ℤ)))" org.eventb.core.source="/plannerNode/mac0.bum|org.eventb.core.machineFile#mac0|org.eventb.core.invariant#:"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

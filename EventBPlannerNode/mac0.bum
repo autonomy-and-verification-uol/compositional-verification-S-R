@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="(" org.eventb.core.assignment="currentPos ≔ start" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="xcoord ≔ getX(start)" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ycoord ≔ getY(start)" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="PlanSet ≔ ∅" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.comment="This is currently a set of relations." org.eventb.core.identifier="PlanSet"/>
+<org.eventb.core.invariant name="*" org.eventb.core.comment=" The set of plans has elements of the form (position1, position2). This will be better if I can use sequences " org.eventb.core.label="inv1" org.eventb.core.predicate="PlanSet ⊆ Coords × Coords"/>
+<org.eventb.core.seesContext name="+" org.eventb.core.target="ctx0"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="start ∈ Observation ⇒ PlanSet = ∅ "/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv3" org.eventb.core.predicate="goal ∈ Observation ⇒ PlanSet = ∅"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv4" org.eventb.core.predicate="∀x,y · x ↦ y ∈ PlanSet ⇒ (x ∉ Observation ∧ y ∉ Observation)"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="currentPos"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv5" org.eventb.core.predicate="currentPos ∈ Coords"/>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="moveLeft">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="currentPos ≠ goal"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="currentPos ≔ (xcoord−1) ↦ ycoord" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="PlanSet ≔ PlanSet ∪{currentPos ↦ (xcoord−1 ↦ ycoord)} " org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="xcoord ≔ xcoord −1 " org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="currentPos ∉ Observation"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="(xcoord−1) ↦ ycoord ∉ Observation ∧ (xcoord −1) ↦ ycoord ∈ Coords"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="start ≠ goal"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="start ∉ Observation ∧ goal ∉ Observation"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="moveRight">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="currentPos ≠ goal"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="start ≠ goal "/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="(xcoord + 1) ↦ ycoord ∉ Observation ∧ (xcoord +1) ↦ ycoord ∈ Coords"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="currentPos ≔ (xcoord +1) ↦ ycoord" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="PlanSet ≔ PlanSet∪{currentPos ↦ (xcoord +1 ↦ ycoord)}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="xcoord ≔ xcoord + 1" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="start ∉ Observation ∧ goal ∉ Observation"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="currentPos ∉ Observation"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="moveUp">
+<org.eventb.core.guard name="'" org.eventb.core.comment=" " org.eventb.core.label="grd1" org.eventb.core.predicate="currentPos ≠ goal"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="start ≠ goal"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="xcoord ↦ ycoord +1 ∉ Observation ∧ xcoord ↦ ycoord + 1 ∈ Coords"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="start ∉ Observation ∧ goal ∉ Observation"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="currentPos ∉ Observation "/>
+<org.eventb.core.action name="," org.eventb.core.assignment="currentPos ≔ xcoord ↦ ycoord +1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="PlanSet ≔ PlanSet∪{currentPos ↦ (xcoord ↦ ycoord + 1)}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="ycoord ≔ ycoord + 1" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="moveDown">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="currentPos ≠ goal"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="start ≠ goal "/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="xcoord ↦ ycoord −1 ∉ Observation ∧ xcoord ↦ ycoord −1 ∈ Coords"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="start ∉ Observation ∧ goal ∉ Observation"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="currentPos ∉ Observation"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="currentPos ≔ xcoord ↦ ycoord − 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="PlanSet ≔ PlanSet∪{currentPos ↦ (xcoord ↦ ycoord −1)}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="ycoord ≔ ycoord − 1" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="xcoord"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv6" org.eventb.core.predicate="xcoord ∈ ℕ ∧ xcoord ≤ gridsize"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="ycoord ∈ ℕ ∧ ycoord ≤ gridsize"/>
+<org.eventb.core.variable name="9" org.eventb.core.identifier="ycoord"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv8" org.eventb.core.predicate="start = goal ⇒ PlanSet = ∅"/>
+</org.eventb.core.machineFile>

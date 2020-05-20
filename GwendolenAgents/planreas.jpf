@@ -1,0 +1,4 @@
+@using = mcapl
+
+target = ail.util.AJPF_w_AIL
+target.args = /home/rafaelcc/eclipse-workspace/folframe-agents/planreas.ail,/home/rafaelcc/eclipse-workspace/folframe-agents/planreas.psl,1

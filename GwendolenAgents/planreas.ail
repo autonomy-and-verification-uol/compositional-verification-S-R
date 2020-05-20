@@ -1,0 +1,6 @@
+mas.file = /home/rafaelcc/eclipse-workspace/folframe-agents/planreas.gwen
+mas.builder = gwendolen.GwendolenMASBuilder
+
+env = ail.mas.DefaultEnvironment
+
+log.warning = ail.mas.DefaultEnvironment

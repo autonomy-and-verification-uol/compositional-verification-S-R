@@ -1,0 +1,6 @@
+--parameters
+gridLength = 10
+
+
+startPos = (a,a)
+--goalPos = (b,b)
